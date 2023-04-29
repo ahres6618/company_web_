@@ -7,6 +7,8 @@ use App\Models\About;
 use Illuminate\Http\Request;
 use Nette\Utils\Image;
 
+
+
 class AboutController extends Controller
 {
     public function AboutPage(){

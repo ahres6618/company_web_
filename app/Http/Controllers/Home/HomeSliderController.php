@@ -23,8 +23,8 @@ public function UpdateSlider(Request $request){
     $save_url='';
     if ($request->file('home_slide')) {
         $image= $request->file('home_slide');
-        $name_gen = hexdec (uniqid()).'.'.$image->getClientOriginalExtension(); // 3434343443.jpg
-        Image::make($image)->resize(636,852)->save('upload/home_slide/'.$name_gen);
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension(); // 3434343443.jpg
+        $image->resize(636,852)->save('upload/home_slide/'.$name_gen);
         $save_url = 'upload/home_slide/'.$name_gen;
         HomeSlide::findOrFail($slide_id) ->update([
             'title'=>$request->title,

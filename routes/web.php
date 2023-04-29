@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController ;
+use App\Http\Controllers\Home\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,6 +47,19 @@ Route::controller (AboutController::class)->group(function () {
 
            
                 });
+
+
+Route::controller (PortfolioController::class)->group(function () {
+    Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
+    Route::get('/add/portfolio', 'AddPortfolio')->name('add.pprtfolio');
+    Route::post('/portfolio/store', 'storePortfolio')->name('potfolio.store');
+    Route::get('/edit/portfolio/{id}', 'EditPortfolio')->name('edit.portfolio');
+    Route::post('/update/portfolio', 'UpdatePortfolio')->name('potfolio.update');
+    Route::get('/delete/portfolio/{id}', 'DeletePortfolio')->name('delete.portfolio');
+
+    
+                           
+      });
 
 
 require __DIR__.'/auth.php';
