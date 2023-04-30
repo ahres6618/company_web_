@@ -72,4 +72,11 @@ class PortfolioController extends Controller
       ]);
     }
 
+
+    public function PortfolioDeatils($id){
+      $portfolio = Portfolio::findOrFail($id);
+      return view('frontend.home_all.portfolio_details', compact('portfolio'));
+
+    }
+
 }

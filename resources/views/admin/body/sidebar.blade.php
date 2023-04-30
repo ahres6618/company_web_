@@ -87,28 +87,24 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-account-circle-line"></i>
-                        <span>Authentication</span>
+                        <span>Blog Categories</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="auth-login.html">Login</a></li>
-                        <li><a href="auth-register.html">Register</a></li>
-                        <li><a href="auth-recoverpw.html">Recover Password</a></li>
-                        <li><a href="auth-lock-screen.html">Lock Screen</a></li>
+                        <li><a href="{{route('allblog.category')}}">All categories</a></li>
+                        <li><a href="{{route('addblog.category')}}">add category</a></li>
+                        
                     </ul>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>
-                        <span>Utility</span>
+                        <span>Blog</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="pages-starter.html">Starter Page</a></li>
-                        <li><a href="pages-timeline.html">Timeline</a></li>
-                        <li><a href="pages-directory.html">Directory</a></li>
-                        <li><a href="pages-invoice.html">Invoice</a></li>
-                        <li><a href="pages-404.html">Error 404</a></li>
-                        <li><a href="pages-500.html">Error 500</a></li>
+                        <li><a href="{{route('blogs.all')}}">All blogs</a></li>
+                        <li><a href="{{route('blogs.add')}}">addblogs</a></li>
+                       
                     </ul>
                 </li>
 
