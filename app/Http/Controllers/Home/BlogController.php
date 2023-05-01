@@ -71,6 +71,27 @@ class BlogController extends Controller
         'success' => ' Blog deleted successfully'
         ]);
       }
+
+      public function DetailsBlog($id){
+         $blog= Blog::findOrFail($id);
+         $latestblog = Blog::latest()->limit(5)->get();
+         $categories=BlogCategory::orderBy('blog_category', 'ASC')->get();
+         return view('frontend.blog_details', compact('blog','latestblog','categories'));
+      }
+
+      public function CategoryPost($id){
+         $blogpost=Blog::where('blog_category_id', $id)->get();
+         $latestblog = Blog::latest()->limit(5)->get();
+         $categories=BlogCategory::orderBy('blog_category', 'ASC')->get();
+         return view('frontend.home_all.cat_blog_detail',compact('blogpost','latestblog','categories'));
+      }
+
+
+      public function HomeBlog(){
+         $latestblog = Blog::latest()->get();
+         $categories=BlogCategory::orderBy('blog_category', 'ASC')->get();
+         return view('frontend.home_all.blog',compact('latestblog','categories'));
+      }
     
 
 }

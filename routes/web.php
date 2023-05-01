@@ -6,6 +6,7 @@ use App\Http\Controllers\Home\AboutController ;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
+use App\Http\Controllers\Home\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -79,11 +80,19 @@ Route::controller(BlogController::class)->group(function () {
     Route::get('/edit/blog/{id}','EditBlog')->name('edit.blog');
     Route::post('/blog/update','UpdateBlog')->name( 'blog.update');
     Route::get('/delete/blog/{id}','DeleteBlog')->name('delete.blog');
+    Route::get('/blog/details/{id}','DetailsBlog')->name('blog.details');
+    Route::get('/category/blog/{id}','CategoryPost')->name('category.post');
+    Route::get('/home/blog','HomeBlog')->name('home.blog');
 
 
-   
-   
-   
+    
+    
+});
+
+Route::controller(ContactController::class)->group(function(){
+    Route::get('/contactme', 'Contact')->name('contact.me');
+    Route::post('/store/message', 'storemessage')->name('store.message');
+    Route::get('/contact/messages', 'Contactmessages')->name('contact.messages');
     
 });
 

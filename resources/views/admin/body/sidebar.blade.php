@@ -107,7 +107,15 @@
                        
                     </ul>
                 </li>
+                <li>
+                    <a href="{{route('contact.messages')}}" class="has-arrow waves-effect">
+                        <i class="ri-profile-line"></i>
+                        <span>Contactmessages</span>
+                    </a>
+                    
+                </li>
 
+              
               
                 
                 </li>
