@@ -93,6 +93,7 @@ Route::controller(ContactController::class)->group(function(){
     Route::get('/contactme', 'Contact')->name('contact.me');
     Route::post('/store/message', 'storemessage')->name('store.message');
     Route::get('/contact/messages', 'Contactmessages')->name('contact.messages');
+    Route::get('/message/read/{id}', 'readmessage')->name('message.read');
     
 });
 

@@ -35,4 +35,9 @@ class ContactController extends Controller
         $contact = Contact::latest()->get();
         return view('admin.contact', compact('contact'));
     }
+
+    public function readmessage($id){
+        $message= Contact::findOrFail($id);
+        return view('frontend.readmessage', compact('message'));
+    }
 }

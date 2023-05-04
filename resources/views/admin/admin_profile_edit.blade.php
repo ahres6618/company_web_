@@ -33,14 +33,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="example-text-input" class="col-sm-2
-                            col-form-label"> </label>
-                            <div class="col-sm-10">
-                            <img id="showimage" class="rounded-circle avatar-xl" src="{{asset('backend/assets/images/small/img-5.jpg') }}" 
-                            alt= "Card image cap">
-                            </div>
-                            </div>
+                       
 
                             <input type="submit" class="btn btn-info btn-rounded waves-effect waves-light" value="update profile" />
                     </form>
@@ -57,18 +50,6 @@
  </div>
 
 
- <script type="text/javascript">
-    $(document).ready(function(){
-    $('#image').change(function(e){
-    console.log('hhhhhh');
-    var reader = new FileReader();
-    reader.onload = function(e){
-    $('#showimage').attr('src',e.target.result);
-    }
-    reader.readAsDataURL(e.target.files['0']);
-    console.log('hhhhhh------------------');
-    });
-    });| |
-    </script>
+ 
 @endsection
     
